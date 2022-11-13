@@ -34,6 +34,6 @@ image
 
 
     
-![png](/images/002/output_15_1.png)
+![png]({{ site.url }}{{ site.baseurl }}/images/002/output_15_1.png)
 
 

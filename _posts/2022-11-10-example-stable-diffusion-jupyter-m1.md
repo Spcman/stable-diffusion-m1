@@ -4,7 +4,7 @@ title:  "Stable Diffusion Example within a Jupyter Notebook using Mac A1 Chip"
 date:   2022-11-10
 ---
 
-Review the [Setup post here](/setup-stable-diffusion-jupyter-m1/)
+Review the [Setup post here]({{ site.url }}{{ site.baseurl }}/setup-stable-diffusion-jupyter-m1/)
 
 In Jupyter, navigate to the stable-diffusion folder and create a new notebook.  Let's check our Python Version.
 
@@ -184,7 +184,7 @@ Here is the output.  See bottom of the page for troubleshooting.
     
 Navigate to the outputs folder above and there should be an image file starting grid-000x.png
 
-![Stable Diffusion Test](/images/002/grid-0008.png)
+![Stable Diffusion Test]({{ site.url }}{{ site.baseurl }}/images/002/grid-0008.png)
 
 ## Troubleshooting
 

@@ -72,4 +72,4 @@ If using the graphical version of Anaconda like me, go to the Anaconda App and c
 
 Go to the home button and start up Jupyter
 
-OK we're ready to try out [first test example](/example-stable-diffusion-jupyter-m1/).
+OK we're ready to try out [first test example]({{ site.url }}{{ site.baseurl }}/example-stable-diffusion-jupyter-m1/).
