@@ -10,7 +10,7 @@ My setup is a Mac Studio 2022 with an Apple M1 Max.  I updated my operating syst
 # Step 1 - Installing Anaconda 
 From a clean install my first costly mistake was to download the wrong version of Anaconda, so don’t do the same as me, when you go to the Anaconda website find the [download link]( https://www.anaconda.com/products/distribution) but click ‘Get Additional Installers’.
 
-![Anaconda Install](/images/002/anaconda_m1.png "Anaconda Install")
+![Anaconda Install]({{ site.url }}{{ site.baseurl }}/images/002/anaconda_m1.png)
 
 Presuming you have the M1 chip too, select **’64-Bit (M1) Graphical Installer’.** Install this version and go to step 2.
 
