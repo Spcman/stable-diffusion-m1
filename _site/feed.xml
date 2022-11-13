@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-11-12T08:42:34+10:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Stable Diffusion on M1 Mac</title><subtitle>Example Jupyter Notebooks using Stable Diffusion AI Art and Video</subtitle><author><name>Nigel Adams</name></author><entry><title type="html">Stable Diffusion Example within a Jupyter Notebook using Mac A1 Chip</title><link href="http://localhost:4000/example-stable-diffusion-jupyter-m1/" rel="alternate" type="text/html" title="Stable Diffusion Example within a Jupyter Notebook using Mac A1 Chip" /><published>2022-11-10T00:00:00+10:00</published><updated>2022-11-10T00:00:00+10:00</updated><id>http://localhost:4000/example-stable-diffusion-jupyter-m1</id><content type="html" xml:base="http://localhost:4000/example-stable-diffusion-jupyter-m1/"><![CDATA[<p>Review the <a href="/setup-stable-diffusion-jupyter-m1/">Setup post here</a></p>
+
+<p>In Jupyter, navigate to the stable-diffusion folder and create a new notebook.  Let’s check our Python Version.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">sys</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"."</span><span class="p">)</span>
+<span class="n">sys</span><span class="p">.</span><span class="n">version</span></code></pre></figure>
+
+<p>The output from this cell should be something like this.</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">3.10.6 (main, Oct 24 2022, 11:04:07) [Clang 12.0.0 ]</code></pre></figure>
+
+<p>Now let’s check our OS.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">platform</span>
+<span class="n">platform</span><span class="p">.</span><span class="n">platform</span><span class="p">()</span>
+</code></pre></div></div>
+<p>The output from this cell should be something like this</p>
+
+<figure class="highlight"><pre><code class="language-plaintext" data-lang="plaintext">macOS-13.0-arm64-arm-64bit</code></pre></figure>
+
+<p>Now let’s just call the txt2img.py file with a prompt as a test.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">%</span><span class="n">run</span> <span class="n">scripts</span><span class="o">/</span><span class="n">txt2img</span><span class="p">.</span><span class="n">py</span> <span class="o">--</span><span class="n">prompt</span> <span class="s">"a red juicy apple floating in outer space, like a planet"</span> <span class="o">--</span><span class="n">n_samples</span> <span class="mi">1</span> <span class="o">--</span><span class="n">n_iter</span> <span class="mi">1</span> <span class="o">--</span><span class="n">plms</span>
+
+</code></pre></div></div>
+<p>Here is the output.  See bottom of the page for troubleshooting.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+    NOTE: Redirects are currently not supported in Windows or MacOs.
+    Global seed set to 42
+
+
+    Loading model from models/ldm/stable-diffusion-v1/model.ckpt
+    Global Step: 470000
+    LatentDiffusion: Running in eps-prediction mode
+    DiffusionWrapper has 859.52 M params.
+    making attention of type 'vanilla' with 512 in_channels
+    Working with z of shape (1, 4, 32, 32) = 4096 dimensions.
+    making attention of type 'vanilla' with 512 in_channels
+
+
+    Some weights of the model checkpoint at openai/clip-vit-large-patch14 were not used when initializing CLIPTextModel: ['vision_model.encoder.layers.8.mlp.fc1.weight', 'vision_model.encoder.layers.23.mlp.fc1.weight', 'vision_model.encoder.layers.5.self_attn.q_proj.weight', 
+    
+    ---snipped----
+    
+     'vision_model.encoder.layers.23.self_attn.out_proj.bias', 'vision_model.encoder.layers.14.layer_norm1.bias', 'vision_model.encoder.layers.15.mlp.fc2.weight', 'vision_model.encoder.layers.3.layer_norm2.weight', 'vision_model.encoder.layers.21.layer_norm2.bias']
+    - This IS expected if you are initializing CLIPTextModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+    - This IS NOT expected if you are initializing CLIPTextModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+    Sampling:   0%|          | 0/1 [00:00&lt;?, ?it/s]
+    data:   0%|          | 0/1 [00:00&lt;?, ?it/s][A
+
+    Data shape for PLMS sampling is (1, 4, 64, 64)
+    Running PLMS Sampling with 50 timesteps
+
+
+    
+    
+    PLMS Sampler:   0%|          | 0/50 [00:00&lt;?, ?it/s][A[A
+    
+    PLMS Sampler:   2%|▏         | 1/50 [00:08&lt;06:36,  8.10s/it][A[A
+    
+    PLMS Sampler:   4%|▍         | 2/50 [00:08&lt;03:03,  3.83s/it][A[A
+    
+    PLMS Sampler:   6%|▌         | 3/50 [00:09&lt;01:53,  2.41s/it][A[A
+    
+    PLMS Sampler:   8%|▊         | 4/50 [00:10&lt;01:20,  1.75s/it][A[A
+    
+    PLMS Sampler:  10%|█         | 5/50 [00:11&lt;01:02,  1.39s/it][A[A
+    
+    PLMS Sampler:  12%|█▏        | 6/50 [00:11&lt;00:51,  1.16s/it][A[A
+    
+    PLMS Sampler:  14%|█▍        | 7/50 [00:12&lt;00:44,  1.03s/it][A[A
+    
+    PLMS Sampler:  16%|█▌        | 8/50 [00:13&lt;00:39,  1.06it/s][A[A
+    
+    PLMS Sampler:  18%|█▊        | 9/50 [00:14&lt;00:36,  1.13it/s][A[A
+    
+    PLMS Sampler:  20%|██        | 10/50 [00:14&lt;00:33,  1.20it/s][A[A
+    
+    PLMS Sampler:  22%|██▏       | 11/50 [00:15&lt;00:31,  1.24it/s][A[A
+    
+    PLMS Sampler:  24%|██▍       | 12/50 [00:16&lt;00:30,  1.26it/s][A[A
+    
+    PLMS Sampler:  26%|██▌       | 13/50 [00:17&lt;00:28,  1.30it/s][A[A
+    
+    PLMS Sampler:  28%|██▊       | 14/50 [00:17&lt;00:27,  1.30it/s][A[A
+    
+    PLMS Sampler:  30%|███       | 15/50 [00:18&lt;00:26,  1.31it/s][A[A
+    
+    PLMS Sampler:  32%|███▏      | 16/50 [00:19&lt;00:26,  1.31it/s][A[A
+    
+    PLMS Sampler:  34%|███▍      | 17/50 [00:20&lt;00:25,  1.31it/s][A[A
+    
+    PLMS Sampler:  36%|███▌      | 18/50 [00:20&lt;00:24,  1.31it/s][A[A
+    
+    PLMS Sampler:  38%|███▊      | 19/50 [00:21&lt;00:23,  1.31it/s][A[A
+    
+    PLMS Sampler:  40%|████      | 20/50 [00:22&lt;00:22,  1.34it/s][A[A
+    
+    PLMS Sampler:  42%|████▏     | 21/50 [00:23&lt;00:21,  1.33it/s][A[A
+    
+    PLMS Sampler:  44%|████▍     | 22/50 [00:23&lt;00:21,  1.33it/s][A[A
+    
+    PLMS Sampler:  46%|████▌     | 23/50 [00:24&lt;00:20,  1.33it/s][A[A
+    
+    PLMS Sampler:  48%|████▊     | 24/50 [00:25&lt;00:19,  1.35it/s][A[A
+    
+    PLMS Sampler:  50%|█████     | 25/50 [00:26&lt;00:18,  1.34it/s][A[A
+    
+    PLMS Sampler:  52%|█████▏    | 26/50 [00:26&lt;00:17,  1.34it/s][A[A
+    
+    PLMS Sampler:  54%|█████▍    | 27/50 [00:27&lt;00:17,  1.33it/s][A[A
+    
+    PLMS Sampler:  56%|█████▌    | 28/50 [00:28&lt;00:16,  1.35it/s][A[A
+    
+    PLMS Sampler:  58%|█████▊    | 29/50 [00:29&lt;00:15,  1.37it/s][A[A
+    
+    PLMS Sampler:  60%|██████    | 30/50 [00:29&lt;00:14,  1.35it/s][A[A
+    
+    PLMS Sampler:  62%|██████▏   | 31/50 [00:30&lt;00:14,  1.34it/s][A[A
+    
+    PLMS Sampler:  64%|██████▍   | 32/50 [00:31&lt;00:13,  1.34it/s][A[A
+    
+    PLMS Sampler:  66%|██████▌   | 33/50 [00:32&lt;00:12,  1.33it/s][A[A
+    
+    PLMS Sampler:  68%|██████▊   | 34/50 [00:32&lt;00:12,  1.33it/s][A[A
+    
+    PLMS Sampler:  70%|███████   | 35/50 [00:33&lt;00:11,  1.33it/s][A[A
+    
+    PLMS Sampler:  72%|███████▏  | 36/50 [00:34&lt;00:10,  1.34it/s][A[A
+    
+    PLMS Sampler:  74%|███████▍  | 37/50 [00:35&lt;00:09,  1.33it/s][A[A
+    
+    PLMS Sampler:  76%|███████▌  | 38/50 [00:35&lt;00:09,  1.32it/s][A[A
+    
+    PLMS Sampler:  78%|███████▊  | 39/50 [00:36&lt;00:08,  1.32it/s][A[A
+    
+    PLMS Sampler:  80%|████████  | 40/50 [00:37&lt;00:07,  1.32it/s][A[A
+    
+    PLMS Sampler:  82%|████████▏ | 41/50 [00:38&lt;00:06,  1.32it/s][A[A
+    
+    PLMS Sampler:  84%|████████▍ | 42/50 [00:38&lt;00:05,  1.34it/s][A[A
+    
+    PLMS Sampler:  86%|████████▌ | 43/50 [00:39&lt;00:05,  1.34it/s][A[A
+    
+    PLMS Sampler:  88%|████████▊ | 44/50 [00:40&lt;00:04,  1.33it/s][A[A
+    
+    PLMS Sampler:  90%|█████████ | 45/50 [00:41&lt;00:03,  1.36it/s][A[A
+    
+    PLMS Sampler:  92%|█████████▏| 46/50 [00:41&lt;00:02,  1.35it/s][A[A
+    
+    PLMS Sampler:  94%|█████████▍| 47/50 [00:42&lt;00:02,  1.36it/s][A[A
+    
+    PLMS Sampler:  96%|█████████▌| 48/50 [00:43&lt;00:01,  1.37it/s][A[A
+    
+    PLMS Sampler:  98%|█████████▊| 49/50 [00:43&lt;00:00,  1.36it/s][A[A
+    
+    PLMS Sampler: 100%|██████████| 50/50 [00:44&lt;00:00,  1.12it/s][A[A
+    
+    data: 100%|██████████| 1/1 [00:49&lt;00:00, 49.09s/it][A
+    Sampling: 100%|██████████| 1/1 [00:49&lt;00:00, 49.09s/it]
+
+    Your samples are ready and waiting for you here: 
+    outputs/txt2img-samples 
+     
+    Enjoy.
+
+</code></pre></div></div>
+
+<p>Navigate to the outputs folder above and there should be an image file starting grid-000x.png</p>
+
+<p><img src="/images/002/grid-0008.png" alt="Stable Diffusion Test" /></p>
+
+<h2 id="troubleshooting">Troubleshooting</h2>
+
+<ul>
+  <li>Read the errors provided and install/update missing librabries</li>
+  <li>Google or the error</li>
+  <li>Compare output from the first two cells above, how does your Python and OS compare? You may need to update your OS or Python?</li>
+</ul>]]></content><author><name>Nigel Adams</name></author><summary type="html"><![CDATA[Review the Setup post here]]></summary></entry><entry><title type="html">Diffusers Library Example within a Jupyter Notebook using Apple Mac M1/2</title><link href="http://localhost:4000/diffusers-stable-diffusion-jupyter-mac/" rel="alternate" type="text/html" title="Diffusers Library Example within a Jupyter Notebook using Apple Mac M1/2" /><published>2022-11-10T00:00:00+10:00</published><updated>2022-11-10T00:00:00+10:00</updated><id>http://localhost:4000/diffusers-stable-diffusion-jupyter-mac</id><content type="html" xml:base="http://localhost:4000/diffusers-stable-diffusion-jupyter-mac/"><![CDATA[<p>Building on our success so far in the previous posts the next logical step, in my opinion, is to experiment with the Hugging Face diffusers library. This library let’s us get text to image output with just a few lines of code.</p>
+
+<p>For this example I downloaded a the latest Hugging Face Mmdel (at the time). This model is more like 8 GB!</p>
+
+<p>Start your Jupyter notebook and ensure you’re logged into hugging face</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="err">!</span><span class="n">huggingface</span><span class="o">-</span><span class="n">cli</span> <span class="n">whoami</span>
+</code></pre></div></div>
+<p>This will reveal your userid</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">diffusers</span> <span class="kn">import</span> <span class="n">StableDiffusionPipeline</span>
+<span class="n">DEVICE</span><span class="o">=</span><span class="s">'mps'</span>
+<span class="n">pipe</span> <span class="o">=</span> <span class="n">StableDiffusionPipeline</span><span class="p">.</span><span class="n">from_pretrained</span><span class="p">(</span><span class="s">"stable-diffusion-v1-5"</span><span class="p">,</span> <span class="n">use_auth_token</span><span class="o">=</span><span class="bp">True</span><span class="p">).</span><span class="n">to</span><span class="p">(</span><span class="n">DEVICE</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>A simple text to image via a prompt</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">image</span> <span class="o">=</span> <span class="n">pipe</span><span class="p">(</span><span class="n">prompt</span><span class="o">=</span><span class="s">"a happy dog working on a macbook air, sythwave"</span><span class="p">).</span><span class="n">images</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">image</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  0%|          | 0/51 [00:00&lt;?, ?it/s]
+</code></pre></div></div>
+
+<p><img src="/images/002/output_15_1.png" alt="png" /></p>]]></content><author><name>Nigel Adams</name></author><summary type="html"><![CDATA[Building on our success so far in the previous posts the next logical step, in my opinion, is to experiment with the Hugging Face diffusers library. This library let’s us get text to image output with just a few lines of code.]]></summary></entry><entry><title type="html">Setup for Stable Diffusion within a Jupyter Notebook using Mac’s A1 / GPU</title><link href="http://localhost:4000/setup-stable-diffusion-jupyter-m1/" rel="alternate" type="text/html" title="Setup for Stable Diffusion within a Jupyter Notebook using Mac’s A1 / GPU" /><published>2022-11-09T00:00:00+10:00</published><updated>2022-11-09T00:00:00+10:00</updated><id>http://localhost:4000/setup-stable-diffusion-jupyter-m1</id><content type="html" xml:base="http://localhost:4000/setup-stable-diffusion-jupyter-m1/"><![CDATA[<p>The following is a description of how I got the simplest example of stable diffusion working in a Jupyter Notebook on my Mac Studio from scratch.</p>
+
+<p>My setup is a Mac Studio 2022 with an Apple M1 Max.  I updated my operating system to Ventura 13.0.  My understaning is that you need macOS 12.3 or higher.</p>
+
+<h1 id="step-1---installing-anaconda">Step 1 - Installing Anaconda</h1>
+<p>From a clean install my first costly mistake was to download the wrong version of Anaconda, so don’t do the same as me, when you go to the Anaconda website find the <a href="https://www.anaconda.com/products/distribution">download link</a> but click ‘Get Additional Installers’.</p>
+
+<p><img src="/images/002/anaconda_m1.png" alt="Anaconda Install" title="Anaconda Install" /></p>
+
+<p>Presuming you have the M1 chip too, select <strong>’64-Bit (M1) Graphical Installer’.</strong> Install this version and go to step 2.</p>
+
+<p>If you had already downloaded and installed the non-M1 version one I like I did at first, unless you can find a cleaner way, you’ll have to uninstall and reinstall the correct version.</p>
+<h1 id="step-2---create-a-conda-environment-for-your-stable-diffusion-in-jupyter">Step 2 - Create a Conda Environment for your Stable Diffusion in Jupyter</h1>
+<p>If you’re not already familiar with Conda environments take a little time to figure out the basics; i.e.</p>
+
+<ul>
+  <li>what are environments</li>
+  <li>how to create</li>
+  <li>how to activate</li>
+  <li>installing packages with the command line</li>
+</ul>
+
+<p>I created an environemt called ‘diffusion’ and will use that in my examples. You can obviously use your own env name.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">conda create <span class="nt">-n</span> diffusion</code></pre></figure>
+
+<p>Activate your conda environment.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">conda activate diffusion</code></pre></figure>
+
+<p>This activates the conda environment you’ll be using. Ensure the terminal prompt changes from (base) to (diffusion).</p>
+
+<h1 id="step-3---download-stable-diffusion-locally">Step 3 - Download Stable Diffusion Locally</h1>
+
+<p>Before we move on, let’s get the stable diffusion files installed locally.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">git clone <span class="nt">-b</span> apple-silicon-mps-support https://github.com/bfirsh/stable-diffusion.git
+<span class="nb">cd </span>stable-diffusion
+<span class="nb">mkdir</span> <span class="nt">-p</span> models/ldm/stable-diffusion-v1/</code></pre></figure>
+
+<p>With stable-diffusion as your current folder you will find they provide a file called requirement.txt. We can use this to install the dependencies we need into our environment.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt</code></pre></figure>
+
+<h1 id="step-4---get-the-model-checkpoint">Step 4 - Get the model checkpoint.</h1>
+
+<p>Now go to the original <a href="https://huggingface.co/CompVis/stable-diffusion-v-1-4-original">Hugging Face repository</a>, create an account and read / understand their license. Download <strong>sd-v1-4.ckpt</strong> (~4 GB) and save it into your models/ldm/stable-diffusion-v1/ folder as <strong>model.ckpt</strong> in the directory you created above.</p>
+
+<p>Next log-in to hugging face.</p>
+
+<figure class="highlight"><pre><code class="language-shell" data-lang="shell">huggingface-cli login</code></pre></figure>
+
+<h1 id="step-5---start-up-a-jupyter-note-book">Step 5 - Start up a Jupyter Note book</h1>
+
+<p>If using the graphical version of Anaconda like me, go to the Anaconda App and click on <strong>Environments</strong>.  Now click the ‘diffusion’ environment and click play.</p>
+
+<p>Go to the home button and start up Jupyter</p>
+
+<p>OK we’re ready to try out <a href="/example-stable-diffusion-jupyter-m1/">first test example</a>.</p>]]></content><author><name>Nigel Adams</name></author><summary type="html"><![CDATA[The following is a description of how I got the simplest example of stable diffusion working in a Jupyter Notebook on my Mac Studio from scratch. My setup is a Mac Studio 2022 with an Apple M1 Max. I updated my operating system to Ventura 13.0. My understaning is that you need macOS 12.3 or higher.]]></summary></entry><entry><title type="html">Is the Mac Studio M1 any good for machine Learning and Stable Diffusion?</title><link href="http://localhost:4000/mac-studio-any-good-for-stable-diffusion/" rel="alternate" type="text/html" title="Is the Mac Studio M1 any good for machine Learning and Stable Diffusion?" /><published>2022-11-08T00:00:00+10:00</published><updated>2022-11-08T00:00:00+10:00</updated><id>http://localhost:4000/mac-studio-any-good-for-stable-diffusion</id><content type="html" xml:base="http://localhost:4000/mac-studio-any-good-for-stable-diffusion/"><![CDATA[<p>Let’s be honest, getting the machine learning notebooks working hasn’t been easy for me (so far) on the Mac Studio.  If you’re thinking of buying a new computer primarily for Machine Learning I’d consider a PC with Nvidia GPU first.  Most of the Python libraries used for Stable Diffusion were originally written for this ecosystem and you’ll definitely have less problems going down the PC path. That said Mac computers with Apple Silicon (M1/M2) have great potential and the developers are adding more and more support.</p>
+
+<p>Read on to see how I go.</p>]]></content><author><name>Nigel Adams</name></author><summary type="html"><![CDATA[Getting the machine learning notebooks working hasn’t been easy for me on the Mac Studio.]]></summary></entry></feed>
