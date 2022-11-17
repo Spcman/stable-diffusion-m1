@@ -96,8 +96,13 @@ social:
   type                   : # Person or Organization (defaults to Person)
   name                   : # If the user or organization name differs from the site's name
   links: # An array of links to social media profiles
+# Analytics
 
-google_analytics: G-H5Z9Q967B1
+analytics:
+  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
+  google:
+    measurement_id       : G-H5Z9Q967B1
+    anonymize_ip         : # true, false (default)
 
 # Site Author
 author:
