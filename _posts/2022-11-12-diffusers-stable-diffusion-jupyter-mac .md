@@ -1,6 +1,7 @@
 ---
 layout: single
 title:  "Diffusers Library Example within a Jupyter Notebook using Apple Mac M1/2"
+comments: true
 date:   2022-11-10
 ---
 

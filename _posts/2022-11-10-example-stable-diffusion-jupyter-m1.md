@@ -1,6 +1,7 @@
 ---
 layout: single
 title:  "Stable Diffusion Example within a Jupyter Notebook using Mac A1 Chip"
+comments: true
 date:   2022-11-10
 ---
 

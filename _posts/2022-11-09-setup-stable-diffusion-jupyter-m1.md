@@ -1,6 +1,7 @@
 ---
 layout: single
 title:  "Setup for Stable Diffusion within a Jupyter Notebook using Mac's A1 / GPU"
+comments: true
 date:   2022-11-09
 ---
 The following is a description of how I got the simplest example of stable diffusion working in a Jupyter Notebook on my Mac Studio from scratch.  
