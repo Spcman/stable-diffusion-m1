@@ -21,9 +21,8 @@ from typing import List, Optional, Union
 
 import torch
 from tqdm.auto import tqdm
-
-from diffusers import StableDiffusionImg2ImgPipeline
 ```
+Load the initial input image as the base for the image2image. 
 
 ```python
 import requests
@@ -44,7 +43,6 @@ prompt = "A fantasy landscape, trending on artstation"
 ```
 
 Here, strength is a value between 0.0 and 1.0, that controls the amount of noise that is added to the input image. Values that approach 1.0 allow for lots of variations but will also produce images that are not semantically consistent with the input.
-
 
 ```python
 generator = torch.Generator().manual_seed(1024)
