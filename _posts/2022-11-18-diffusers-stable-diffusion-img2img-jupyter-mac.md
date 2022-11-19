@@ -1,11 +1,13 @@
 ---
 layout: single
-title:  "Guided Image2Image Pipeline Jupyter Notebook using Apple Silicon"
+title:  "Text Guided Image2Image Pipeline Jupyter Notebook using Apple Silicon"
 comments: true
 date:   2022-11-18
 ---
 
 Building on our success with Text to Image using our M1, let's check we can also run the Image to Image diffuser pipeline (guided by a text prompt).  
+
+This example is based on the [Hugging Face img2img example here](https://huggingface.co/docs/diffusers/using-diffusers/img2img)
 
 ```python
 from diffusers import StableDiffusionImg2ImgPipeline
