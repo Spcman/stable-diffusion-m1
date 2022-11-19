@@ -5,7 +5,7 @@ comments: true
 date:   2022-11-10
 ---
 
-Building on our success so far in the previous posts the next logical step, in my opinion, is to experiment with the Hugging Face diffusers library. This library let's us get text to image output with just a few lines of code.
+Building on our success so far in the previous posts the next logical step, in my opinion, is to experiment with the [Hugging Face diffusers library](https://huggingface.co/docs/diffusers/index). This library let's us get text to image output with just a few lines of code.
 
 For this example I downloaded a the latest Hugging Face Mmdel (at the time). This model is more like 8 GB! 
 

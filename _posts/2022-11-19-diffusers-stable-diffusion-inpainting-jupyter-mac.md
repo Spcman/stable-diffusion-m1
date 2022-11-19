@@ -6,7 +6,7 @@ date:   2022-11-19
 ---
 
 For this one we need to download the Hugging Face [Stable-Diffusion-Inpainting Model](https://huggingface.co/runwayml/stable-diffusion-inpainting). You need to read/accept the licence, download the repository and place in your models folder. I suggest you get this this using `git lfs install` then 
-`git clone https://huggingface.co/runwayml/stable-diffusion-inpainting` . This will download the model checkpoint and associated files needed to make the following code block to work.
+`git clone https://huggingface.co/runwayml/stable-diffusion-inpainting`. This will download the model checkpoint and associated files needed to make the following code block to work.
 
 ```python
 from diffusers import StableDiffusionInpaintPipeline
