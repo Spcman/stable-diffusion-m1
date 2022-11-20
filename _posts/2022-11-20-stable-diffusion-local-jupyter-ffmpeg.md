@@ -5,11 +5,11 @@ comments: true
 date:   2022-11-20
 ---
 
-To make videos we're going to use the `ffmpeg` command line tool.  This is installed as an OS executable and isn't part of Python as such.
+To make videos we're going to use the `ffmpeg` command line tool.  This is installed as an Mac OS executable and isn't part of Python as such.
 
 We'll need ffmpeg installed correctly. If not installed already you can use `brew install ffmpeg` to get it.  You can also use `brew update && brew upgrade` to update it. This does take a little while to download and install.
 
-For our test I'm going to use the images created in the last post.
+For our test I'm going to use the images created in the [last post]({{ site.url }}{{ site.baseurl }}/stable-diffusion-jupyter-mac-toolbox-01/)
 
 ```python
 !ls outputs/vampire01
@@ -31,7 +31,7 @@ For our test I'm going to use the images created in the last post.
 abs_path='/opt/homebrew/bin/'
 max_frames=1000
 fps = 12
-image_path = "outputs/vampire01/img_%05d.png"   #note: this includes a regular expression to define the sequencing as xxx (3 digits).
+image_path = "outputs/vampire01/img_%05d.png"   #note: this includes a regular expression to define the sequencing as xxxxx (5 digits).
 mp4_path = "video/vampire.mp4"
 ```
 
@@ -61,7 +61,7 @@ print(' '.join(cmd))
     /opt/homebrew/bin/ffmpeg -y -vcodec png -r 12 -start_number 0 -i outputs/vampire01/img_%05d.png -frames:v 1000 -c:v libx264 -vf fps=12 -pix_fmt yuv420p -crf 17 -preset veryfast -pattern_type sequence video/vampire.mp4
 
 
-We could run the command above in our OS shell.
+We could run the command above in our Mac OS terminal shell.
 
 **Note:** we have used the absolute path to run the ffmpeg executable to avoid ffmpeg not found errors.  This isn't required if running the ffmpeg from a shell.
 

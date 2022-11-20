@@ -97,4 +97,4 @@ for i in range(num_images):
       0%|          | 0/51 [00:00<?, ?it/s]
 
 
-This will generate 50 images in out ouputs folder.
+This will generate 50 images in out ouputs folder. [Let's use these to create a video]({{ site.url }}{{ site.baseurl }}/stable-diffusion-m1/stable-diffusion-local-jupyter-ffmpeg/).
