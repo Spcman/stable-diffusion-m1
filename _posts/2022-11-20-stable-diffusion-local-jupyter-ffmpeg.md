@@ -118,7 +118,14 @@ else:
 
     Video video/vampire.mp4 rendered
 
-<iframe width="360" height="640" src="https://youtube.com/shorts/xtmSAvpopek?feature=share" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+<div class="embed-container">
+  <iframe
+      src="https://www.youtube.com/embed/{{ include.id }}"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="true">
+  </iframe>
+</div>
 
 
