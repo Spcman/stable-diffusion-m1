@@ -118,7 +118,6 @@ else:
 
     Video video/vampire.mp4 rendered
 
-{% include video id="-xtmSAvpopek" provider="youtube" %}
 
 {% include video id="xtmSAvpopek" provider="youtube" %}
 
