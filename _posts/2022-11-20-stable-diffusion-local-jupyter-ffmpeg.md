@@ -118,5 +118,7 @@ else:
 
     Video video/vampire.mp4 rendered
 
-{% include video id="-xtmSAvpopek" provider="youtube" %}
+<iframe width="360" height="640" src="https://youtube.com/shorts/xtmSAvpopek?feature=share" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
 
