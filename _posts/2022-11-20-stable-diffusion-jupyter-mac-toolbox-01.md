@@ -2,7 +2,7 @@
 layout: single
 title:  "Stable Diffusion Diffusers Toolbox 01 (NSFW, Image Size and Generating Mutiple Images)"
 comments: true
-date:   2022-11-13
+date:   2022-11-20
 ---
 
 Let's look at a few esential tools that will come in handy later.
@@ -97,7 +97,4 @@ for i in range(num_images):
       0%|          | 0/51 [00:00<?, ?it/s]
 
 
-
-
-
-
+This will generate 50 images in out ouputs folder.
