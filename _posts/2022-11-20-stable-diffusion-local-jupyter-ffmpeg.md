@@ -119,6 +119,6 @@ else:
     Video video/vampire.mp4 rendered
 
 
-{% include video id="xtmSAvpopek" provider="youtube" %}
+<iframe width="604" height="1074" src="https://www.youtube.com/embed/xtmSAvpopek" title="Vampire AI Art 01 (embedded)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
