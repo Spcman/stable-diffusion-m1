@@ -6,7 +6,7 @@ date:   2022-11-25
 ---
 With [DreamBooth](https://dreambooth.github.io/) you can fine-tune and add your own images into the AI art’s learning model.  Unoriginally I thought I would experiment by feeding it images of me! Feeding it only 15 pictures I was still blown away.
 
-I did try to get this running locally on my Mac but ended up using Google’s Colab for this experiment.  This is cheating I know, however, training a new model is an infrequent task so why spend too long on it when Colab does the job for free.  Google Colab is sufficiently powerful enough for this task.  
+I did try to get this running locally on my Mac but ended up using Google’s Colab for this experiment.  This is cheating I know, however, training a new model is an infrequent task so why spend too long figuring it all out on the Mac when Colab does the job for free.  The whole training process takes about 30 mins.
 
 Having Google Drive (gdrive) setup is also handy so you can permanently save the new check-point model generated. The only other prerequisite is having a [HuggingFace access token](https://huggingface.co/) but this is free also.  You just have to create an account and read/accept the terms.
 
