@@ -6,16 +6,16 @@ date:   2022-11-25
 ---
 With [DreamBooth](https://dreambooth.github.io/) you can fine-tune and add your own images into the AI art’s learning model.  Unoriginally I thought I would experiment by feeding it images of me! Feeding it only 15 pictures I was still blown away.
 
-I did try to get this running locally on my Mac but ended up using Google’s Colab for this experiment (cheating I know).  I saved the newly fine-tuned model to my Google Drive.  I will use the model I generated again one day for more local experiments on the Mac.
+I did try to get this running locally on my Mac but ended up using Google’s Colab for this experiment.  This is cheating I know, however, training a new model is an infrequent task so why spend too long on it when Colab does the job for free.  Google Colab is sufficiently powerful enough for this task.  
 
-Google’s free Collaboratory (Colab) is sufficiently powerful enough for this task.  Having Google Drive (gdrive) setup is also handy so you can permanently save the new check-point model generated. The only other prerequisite is having a [HuggingFace access token](https://huggingface.co/) but this is free also.  You just have to create an account and read/accept the terms.
+Having Google Drive (gdrive) setup is also handy so you can permanently save the new check-point model generated. The only other prerequisite is having a [HuggingFace access token](https://huggingface.co/) but this is free also.  You just have to create an account and read/accept the terms.
 
-Start by creating a new folder on your computer and add 10 or more input images of yourself (or the subject you want to use).  The images must be 500 pixels x 500 pixels.  Don't worry about removing the background or anything fancy photo editing. Try to get a few varying angles. I used .jpg as the format and file extension.
+Start by creating a new folder on your computer and add 10 or more input images of yourself (or the subject you want to use).  The images must be 500 pixels x 500 pixels.  Don't worry about removing the background or any fancy photo editing. Try to get a few varying angles of the subject. I used .jpg as the file format and file extension.
 
 
-The [DreamBooth colab notebook I used is here](https://colab.research.google.com/github/ShivamShrirao/diffusers/blob/main/examples/dreambooth/DreamBooth_Stable_Diffusion.ipynb)
+The [DreamBooth Colab notebook I used is here](https://colab.research.google.com/github/ShivamShrirao/diffusers/blob/main/examples/dreambooth/DreamBooth_Stable_Diffusion.ipynb)
 
-Open this up....but note I’m not going to do a full tutorial as you’ll find good instructions quite easily by searching for DreamBooth Colab on Google or YouTube.  You don’t need programming skills as such and can use the checkpoint model you create in [DiffusionBee](https://diffusionbee.com/) for fast results without any programming skills.
+Open this up....but note I’m not going to do a full tutorial as you’ll find good instructions quite easily by searching for 'DreamBooth Colab' on Google or YouTube.  You don’t need programming skills as such and can use the checkpoint model you create in [DiffusionBee](https://diffusionbee.com/) for fast results without any programming skills.
 
 Here are the code blocks I updated (as per the instructions on the notebook).
 
