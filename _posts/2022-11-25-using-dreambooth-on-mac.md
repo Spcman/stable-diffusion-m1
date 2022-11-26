@@ -29,9 +29,11 @@ Here are the code blocks I updated (as per the instructions on the notebook).
 
 `OUTPUT_DIR stable_diffusion_weights/nigeladams`
 
-This is the output directory on gdrive where the check-point model will be saved.  Once you have the model you can download it and use in other experiments or programs like DiffusionBee to generate the AI art.
+This is the output directory on gdrive where the check-point model will be saved.  Once you have the model you can download it and use it in other experiments or programs like DiffusionBee to generate the AI art.
 
 ## Start Training
+
+Update to suit, here are my edits.
 
 ```python
 concepts_list = [
@@ -55,9 +57,9 @@ Run the rest the without changing the code/defaults.  The training step (startin
 
 ## After running the cells
 
-At the end of the process navigate to the OUTPUT_DIR in your gdrive and find your checkpoint model.  This will be approximately 2 GB or more.
+At the end of the process navigate to the OUTPUT_DIR in your gdrive and find your checkpoint model.  This may be inside a subfolder and will be approximately 2 GB or more.
 
-Pictures below were generated in DiffusionBee (with the custom model option). The txt2image prompt I used was: picture of nigel adams spcman as neo from the movie matrix, green digital background, badass
+The pictures below were generated in DiffusionBee (with the custom model option). The txt2image prompt I used was: 'picture of nigel adams spcman as neo from the movie matrix, green digital background, badass' lol.
 
 ![png]({{ site.url }}{{ site.baseurl }}/images/005/nigel_adams_brisbane.png)
 
