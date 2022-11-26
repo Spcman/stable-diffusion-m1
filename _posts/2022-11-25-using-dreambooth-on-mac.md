@@ -4,18 +4,20 @@ title:  "Using DreamBooth on a Mac"
 comments: true
 date:   2022-11-25
 ---
-With DreamBooth you can fine-tune and add your own images into the AI art’s learning model.  Unoriginally I thought I would experiment by feeding it images of me! Feeding it only 15 pictures I was still blown away.
+With [DreamBooth](https://dreambooth.github.io/) you can fine-tune and add your own images into the AI art’s learning model.  Unoriginally I thought I would experiment by feeding it images of me! Feeding it only 15 pictures I was still blown away.
 
 Note, I tried to get this running locally on my Mac but ended up using Google’s CoLab for this experiment.  I saved the newly fine-tuned model to my Google Drive.  I might use the model I generated again one day for more local experiments on the Mac.
 
 Google’s free Collaboratory (colab) is sufficiently powerful enough for this task.  Having Google Drive (gdrive) setup is also handy so you can permanently save the new check-point model generated. The only other prerequisite is having a HuggingFace access token but this is free also https://huggingface.co/
 
+Before starting make a new folder on your computer and make 10 or so input images of yourself (or the subject you want to add).  The images must be 500 pixels x 500 pixels.  Don't worry about removing the background or anyhting too fancy'.  I used .jpg as the format and file extension.
+
+
 The [DreamBooth colab notebook I used is here](https://colab.research.google.com/github/ShivamShrirao/diffusers/blob/main/examples/dreambooth/DreamBooth_Stable_Diffusion.ipynb)
 
-I’m not going to do a full tutorial as you’ll find good ones quite easily by searching for DreamBooth on Google or YouTube.  You don’t need programming skills as such and can use the checkpoint model you create in [DiffusionBee](https://diffusionbee.com/) for fast results without any programming skills.  
+Open this up....but note I’m not going to do a full tutorial as you’ll find good ones quite easily by searching for DreamBooth Colab on Google or YouTube.  You don’t need programming skills as such and can use the checkpoint model you create in [DiffusionBee](https://diffusionbee.com/) for fast results without any programming skills.
 
 Here are the code blocks I updated (as per the instructions on the notebook).
-
 
 ## Login to HuggingFace
 
@@ -31,6 +33,7 @@ This is the output directory on gdrive where the check-point model will be saved
 
 ## Start Training
 
+```python
 concepts_list = [
     {
         "instance_prompt":      "photo of nigel adams spcman",
@@ -38,10 +41,9 @@ concepts_list = [
         "instance_data_dir":    "/content/data/nigeladams",
         "class_data_dir":       "/content/data/man"
     },
+```
 
-Obviously remember the instance prompt as that will trigger your image in the AI art generator.
-
-When you get to the Upload your images cell, refresh the files list and drag and drop your training images as per below.
+Obviously remember the instance prompt as that will trigger your image in the AI art generator. After running this cell, the code will generate a folder to upload your training imagess. Refresh the files list and drag and drop your training images as per below.
 
 ![gif]({{ site.url }}{{ site.baseurl }}/images/005/ezgif.com-gif-maker.gif)
 
@@ -49,13 +51,13 @@ When you get to the Upload your images cell, refresh the files list and drag and
 
 `--save_sample_prompt="photo of nigel adams spcman" \`
 
-Run the rest the without changing the code/defaults.
+Run the rest the without changing the code/defaults.  The training step (starting !accelerate ) will take 30 mins or so.
 
 ## After running the cells
 
 At the end of the process navigate to the OUTPUT_DIR in your gdrive and find your checkpoint model.  This will be approximately 2 GB or more.
 
-Pictures Generated in DiffusionBee (with custom model) with the prompt: picture of nigel adams spcman as neo from the movie matrix, green digital background, badass
+Pictures below were generated in DiffusionBee (with the custom model option). The txt2image prompt I used was: picture of nigel adams spcman as neo from the movie matrix, green digital background, badass
 
 ![png]({{ site.url }}{{ site.baseurl }}/images/005/nigel_adams_brisbane.png)
 
