@@ -8,7 +8,7 @@ With [DreamBooth](https://dreambooth.github.io/) you can fine-tune and add your 
 
 I did try to get this running locally on my Mac but ended up using Google’s Colab for this experiment.  This is cheating I know, however, training a new model is an infrequent task so why spend too long figuring it all out on the Mac when Colab does the job for free.  The whole training process takes about 30 mins.
 
-Having Google Drive (gdrive) setup is also handy so you can permanently save the new check-point model generated. The only other prerequisite is having a [HuggingFace access token](https://huggingface.co/) but this is free also.  You just have to create an account and read/accept the terms.
+Having Google Drive (gdrive) setup is handy so you can permanently save the new check-point model generated. The only other prerequisite is having a [HuggingFace access token](https://huggingface.co/) but this is free also.  You just have to create an account and read/accept the terms.
 
 Start by creating a new folder on your computer and add 10 or more input images of yourself (or the subject you want to use).  The images must be 500 pixels x 500 pixels.  Don't worry about removing the background or any fancy photo editing. Try to get a few varying angles of the subject. I used .jpg as the file format and file extension.
 
