@@ -4,7 +4,7 @@ title:  "Creating an NFT collection on Opensea"
 comments: true
 date:   2022-11-25
 ---
-Over the weekend I created my first NFT collection on Opensea. I don’t think I’ll have much success, but I learn by doing.  If things go well I will definitely put more effort into this as a possible income source.  Here's a low-res sample
+Over the weekend I created my first NFT collection on [Opensea](https://opensea.io/). I don’t think I’ll have much success, but I learn by doing.  If things go well I will definitely put more effort into this as a possible income source.  Here's a low-res sample
 
 ![Nigel Emma NFT]({{ site.url }}{{ site.baseurl }}/images/opensea-nft-gold-dark-beauty.png)
 
