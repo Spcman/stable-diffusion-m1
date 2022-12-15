@@ -5,7 +5,7 @@ comments: true
 date:   2022-11-20
 ---
 
-To make videos we're going to use the `ffmpeg` command line tool.  This is installed as an Mac OS executable and isn't part of Python as such.
+To make videos we're going to use the `ffmpeg` command line tool.  This is installed as an Mac OS executable and isn't part of Python.
 
 We'll need ffmpeg installed correctly. If not installed already you can use `brew install ffmpeg` to get it.  You can also use `brew update && brew upgrade` to update it. This does take a little while to download and install.
 
