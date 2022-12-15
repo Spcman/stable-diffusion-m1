@@ -1,6 +1,6 @@
 ---
 layout: archive
-permalink: /resources/
+permalink: /gallery/
 title: "Gallery Showcase"
 author_profile: true
 header:
