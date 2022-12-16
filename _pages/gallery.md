@@ -33,7 +33,10 @@ Prompt: nousr robot, complex 3d render ultra detailed of emma hewison hb1 porcel
 
 ![Emma Future]({{ site.url }}{{ site.baseurl }}/images/gallery/emma-future.png)
 
-These images were produced by text prompts and then combined using 'AI outpainting'. No photoshop.
+
+## It didn't happen PART II, all AI generated images.
+
+The following images were produced by text prompts and then combined using 'AI outpainting'. No photoshop.
 
 First sighting of Emma and Nigel
 
