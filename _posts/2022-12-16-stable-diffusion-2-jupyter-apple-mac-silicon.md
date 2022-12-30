@@ -5,7 +5,7 @@ comments: true
 date:   2022-12-16
 ---
 
-Stable Diffusion 2 (SD2) has been released and the diffusers library already supports it.  The HuggingFace upgrade has support for 768x768 higher resolution imagery and built in image upscaling. I also read [this article](https://appleinsider.com/articles/22/12/01/new-betas-have-apple-silicon-optimizations-for-stable-diffusion-ai-art-generator) today about stable diffusion support within the Mac operating system which is quite exciting.   I upgraded to operating system to Ventura 13.1.
+Stable Diffusion 2 (SD2) has been released and the diffusers library already supports it.  The HuggingFace upgrade has support for 768x768 higher resolution imagery and built in image upscaling. I also read [this article](https://appleinsider.com/articles/22/12/01/new-betas-have-apple-silicon-optimizations-for-stable-diffusion-ai-art-generator) today about stable diffusion support within the Mac operating system which is quite exciting.   I upgraded my Mac's operating system to Ventura 13.1.
 
 Before upgrading to SD2 I backed up and cloned the working stable diffusion 1.x conda environment and started a new one.  I had some trouble again with libraries and dependences especially this annoying error: `ImportError: cannot import name 'ReduceOp' from 'torch.distributed.`
 
