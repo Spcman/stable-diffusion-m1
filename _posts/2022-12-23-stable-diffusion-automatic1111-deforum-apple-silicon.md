@@ -19,9 +19,6 @@ Now I’m up and running I’m going to spend a while playing with this.  Here a
 <iframe width="604" height="1074" src="https://www.youtube.com/embed/Lln2AhtvbjQ" title="Taylor Swift Anti-hero AI Animation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
-<iframe width="604" height="1074" src="https://www.youtube.com/embed/swRHw_WOn3I" title="Blace Lace Bat AI Animation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-
 
 
 
