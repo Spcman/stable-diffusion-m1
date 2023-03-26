@@ -7,7 +7,11 @@ header:
   image: "/images/books.jpeg"
 ---
 
-## It didn't happen, all AI generated images.
+[Spaceman on TikTok](https://www.tiktok.com/@spaceman_mashups)
+
+[Spaceman on YouTube](https://www.youtube.com/@spaceman_ai)
+
+## It didn't happen, the following are all AI generated images.
 
 Prompt: cartoon of nigel adams spcman, Colorful
 
@@ -32,6 +36,12 @@ Prompt: Detailed digital portrait of nigel adams spcman , Pixar animation, chara
 Prompt: nousr robot, complex 3d render ultra detailed of emma hewison hb1 porcelain profile, android face, cyborg, robotic parts, beautiful studio soft light, rim light, vibrant details, luxurious cyberpunk, elegant, beautiful background, octane render, 8k
 
 ![Emma Future]({{ site.url }}{{ site.baseurl }}/images/gallery/emma-future.png)
+
+![Emma Future]({{ site.url }}{{ site.baseurl }}/images/gallery/emma-portrait.png)
+
+![Emma Future]({{ site.url }}{{ site.baseurl }}/images/gallery/emma-portrait2.png)
+
+![Emma Future]({{ site.url }}{{ site.baseurl }}/images/gallery/nige-pixar-style.png)
 
 
 ## It didn't happen PART II, all AI generated images.
