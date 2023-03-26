@@ -11,7 +11,7 @@ header:
 
 [Spaceman on YouTube](https://www.youtube.com/@spaceman_ai)
 
-## It didn't happen, the following are all AI generated images.
+## AI Pictures of us
 
 Prompt: cartoon of nigel adams spcman, Colorful
 
@@ -44,7 +44,7 @@ Prompt: nousr robot, complex 3d render ultra detailed of emma hewison hb1 porcel
 ![Emma Future]({{ site.url }}{{ site.baseurl }}/images/gallery/nige-pixar-style.png)
 
 
-## It didn't happen PART II, all AI generated images.
+## AI Outpainting
 
 The following images were produced by text prompts and then combined using 'AI outpainting'. No photoshop.
 
