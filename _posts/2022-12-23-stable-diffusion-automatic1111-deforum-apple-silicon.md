@@ -14,13 +14,7 @@ When I stumbled on Automatic 1111 I didn’t expect there to be a Apple Mac vers
 Adding the [Deforum extension](https://github.com/deforum-art/deforum-for-automatic1111-webui) was also really easy.  This [excellent deforum documentation](https://dreamingcomputers.com/deforum-stable-diffusion/deforum-stable-diffusion-settings/) will help you get started with the controls and levers within the Deforum add-in. Also check out [this YouTube video](https://youtu.be/R52hxnpNews) that helped me enormously.
 
 
-Now I’m up and running I’m going to spend a while playing with this.  Here is my first project.
-
-Find more here: -
-
-[Spaceman on TikTok](https://www.tiktok.com/@spaceman_mashups)
-
-[Spaceman on YouTube](https://www.youtube.com/@spaceman_ai)
+Here is my first project.  Find more here: [Spaceman on TikTok](https://www.tiktok.com/@spaceman_mashups) and here [Spaceman on YouTube](https://www.youtube.com/@spaceman_ai)
 
 <iframe width="604" height="1074" src="https://www.youtube.com/embed/Lln2AhtvbjQ" title="Taylor Swift Anti-hero AI Animation" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
